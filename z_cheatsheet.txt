@@ -23,6 +23,8 @@ $project->title = 'TEst';
 $project->save();
 
 
+//Get Routes
+php artisan route:list
 
 //Generate a controller
 php artisan make:controller PostsController -r -m Post
