@@ -1,7 +1,7 @@
 mysql -u root -p
+
 composer create-project --prefer-dist laravel/laravel my_app
 php artisan serve
-
 
 php artisan make:model ClassName
 
@@ -10,12 +10,19 @@ php artisan migrate:install
 php artisan migrate:rollback
 php artisan migrate:fresh
 
+//Create migration
 php artisan make:migration create_projects_table
 
 php artisan tinker
 
+//Model manipluation
 App\Project::first() all() ->title;  
 
 $project = new App\Project;
 $project->title = 'TEst';
 $project->save();
+
+
+
+//Generate a controller
+php artisan make:controller PostsController -r -m Post
