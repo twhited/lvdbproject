@@ -4,7 +4,7 @@
     <h1>Create a new Project</h1>
 
     <form method="POST" action="/projects">
-        {{ csrf_field() }}
+        @csrf
 
         <div class="form-group">
             <label for="title">Project Title</label>

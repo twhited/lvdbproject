@@ -3,10 +3,9 @@
 @section('content')
     <h1>Edit Project</h1>
     <form method="POST" action="/projects/{{ $project->id }}">
-        {{ method_field('PATCH') }}
-        {{ csrf_field() }}
-
-
+        @method('PATCH')
+        @csrf
+       
         <div class="form-group">
             <label for="title">Project Title</label>
             <input type="text" class="form-control" name="title" id="title" aria-describedby="helpId" value="{{ $project->title }}" placeholder="Project Title">
@@ -24,9 +23,9 @@
     <hr>
 
     <form method="POST" action="/projects/{{ $project->id }}">
-        {{ method_field('DELETE') }}
-        {{ csrf_field() }}
-
+        @method('DELETE')
+        @csrf
+       
         <div><button type="submit" class="btn btn-primary">Delete Project</button></div>
     </form>
 @endsection
